@@ -1,27 +1,44 @@
-var db = require("../models");
+var db = require('../models');
 
-module.exports = function(app) {
-  // Load index page
-  app.get("/", function(req, res) {
-    db.Example.findAll({}).then(function(dbExamples) {
-      res.render("index", {
-        msg: "Welcome!",
-        examples: dbExamples
-      });
-    });
+module.exports = (app) => {
+  // home page
+  app.get('/', (req, res) => {
+      res.render('index')
   });
 
-  // Load example page and pass in an example by id
-  app.get("/example/:id", function(req, res) {
-    db.Example.findOne({ where: { id: req.params.id } }).then(function(dbExample) {
-      res.render("example", {
-        example: dbExample
+  // navigate between pages from the navbar
+  app.get('/:page', (req, res) => {
+    var page = req.params.page;
+    switch(page) {
+      case ('services'):
+      return res.render('services');
+      case ('equipment'):
+      return // db.Equipment.findAll({ <- the alternative to specific equipment urls will look something like this
+        // include: []                    where we include each associated model and populate our template modals with the data
+      // }).then((equipment) => {
+        // res.render('equipment');
+      // });
+      case ('clients'):
+      return db.Client.findAll({}).then((clients) => {
+        res.render('clients' , {
+          clients: clients
+        });
       });
-    });
+      case ('contact'):
+      return res.render('contact');
+      case ('default'):
+      return res.redirect('/');
+    }
   });
+
+  // equipment urls **these don't need to be their own urls**
+  // these could just be built into our equipment template 
+  app.get('/equipment/:gear', (req, res) => {
+    var gear = req.params.gear;
+  }) 
 
   // Render 404 page for any unmatched routes
-  app.get("*", function(req, res) {
-    res.render("404");
+  app.get('*', (req, res) => {
+    res.render('404');
   });
 };
