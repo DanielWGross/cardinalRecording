@@ -13,16 +13,14 @@ module.exports = (app) => {
       case ('services'):
       return res.render('services');
       case ('equipment'):
-      return // db.Equipment.findAll({ <- the alternative to specific equipment urls will look something like this
+      return res.render('equipment');// db.Equipment.findAll({ <- the alternative to specific equipment urls will look something like this
         // include: []                    where we include each associated model and populate our template modals with the data
       // }).then((equipment) => {
         // res.render('equipment');
       // });
       case ('clients'):
       return db.Client.findAll({}).then((clients) => {
-        res.render('clients' , {
-          clients: clients
-        });
+        res.render('clients');
       });
       case ('contact'):
       return res.render('contact');
