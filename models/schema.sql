@@ -1,5 +1,3 @@
-DROP DATABASE IF EXISTS exampledb;
-CREATE DATABASE exampledb;
+CREATE DATABASE cardinal_recording;
+USE cardinal_recording;
 
-DROP DATABASE IF EXISTS testdb;
-CREATE DATABASE testdb;
