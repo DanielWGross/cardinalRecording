@@ -18,11 +18,10 @@ module.exports = (app) => {
       }).then((equipment) => {
         res.json(equipment);
       });
+
       case ('clients'):
       return db.Client.findAll({}).then((clients) => {
-        res.render('clients' , {
-          clients: clients
-        });
+        res.render('clients');
       });
       case ('contact'):
       return res.render('contact');
