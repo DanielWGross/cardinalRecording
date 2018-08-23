@@ -4,7 +4,7 @@ module.exports = (app) => {
   // get all equipment
   app.get('/api/equipment', (req, res) => {
     db.Equipment.findAll({
-      include: []
+      include: [ models.Plugin ]
     }).then((equipment) => {
       res.json(equipment);
     })
@@ -23,6 +23,11 @@ module.exports = (app) => {
   //
   //
   // just a preliminary skeleton, our admin functionality will live here and in a client side js file with the event listeners
+  app.post('/contact', (req, res) => {
+    db.Contact.create(req.body).then((dbContact) => {
+      res.json(dbContact);
+    });
+  });
 
   app.post('/equipment/admin', (req, res) => {
     db.Equipment.create(req.body).then((equipment) => {
