@@ -4,7 +4,7 @@ module.exports = (app) => {
   // get all equipment
   app.get('/api/equipment', (req, res) => {
     db.Equipment.findAll({
-      include: []
+      include: [ models.Plugin ]
     }).then((equipment) => {
       res.json(equipment);
     })
