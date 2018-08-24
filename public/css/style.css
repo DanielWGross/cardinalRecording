@@ -18,7 +18,7 @@ Table OF Contents
 3 > Navigation
 4 > Header
 5 > About
-6 > Portfolio
+6 > Equipment
 7 > Services
 8 >  Why choose us
 9 >  Numbers
@@ -694,19 +694,19 @@ header {
 
 
 /*------------------------------------*\
-	Portfolio
+    Equipment
 \*------------------------------------*/
 
-.work {
+.equip {
     position: relative;
     padding: 20px;
 }
 
-.work>img {
+.equip>img {
   width: 100%;
 }
 
-.work .overlay {
+.equip .overlay {
     background: #1C1D21;
     position: absolute;
     top: 0px;
@@ -720,13 +720,13 @@ header {
     transition-delay: 0.2s;
 }
 
-.work:hover .overlay {
+.equip:hover .overlay {
     -webkit-transition-delay: 0s;
     transition-delay: 0s;
     opacity: 0.8;
 }
 
-.work .work-content {
+.equip .equip-content {
     position: absolute;
     left: 25px;
     right: 25px;
@@ -737,7 +737,7 @@ header {
     transform: translateY(-50%);
 }
 
-.work .work-content h3 {
+.equip .equip-content h3 {
     -webkit-transform: translateY(100%);
     -ms-transform: translateY(100%);
     transform: translateY(100%);
@@ -750,7 +750,7 @@ header {
     transition-delay: 0.1s;
 }
 
-.work:hover .work-content h3 {
+.equip:hover .equip-content h3 {
     -webkit-transform: translateY(0%);
     -ms-transform: translateY(0%);
     transform: translateY(0%);
@@ -759,7 +759,7 @@ header {
     transition-delay: 0.1s;
 }
 
-.work .work-content span {
+.equip .equip-content span {
     display: block;
     text-transform: uppercase;
     -webkit-transform: translateY(100%);
@@ -774,7 +774,7 @@ header {
     transition-delay: 0.2s;
 }
 
-.work:hover .work-content span {
+.equip:hover .equip-content span {
     -webkit-transform: translateY(0%);
     -ms-transform: translateY(0%);
     transform: translateY(0%);
@@ -783,7 +783,7 @@ header {
     transition-delay: 0s;
 }
 
-.work .work-link {
+.equip .equip-link {
     text-align: center;
     margin-top: 20px;
     opacity: 0;
@@ -791,7 +791,7 @@ header {
     transition: 0.2s opacity;
 }
 
-.work .work-link a {
+.equip .equip-link a {
     display: inline-block;
     width: 50px;
     height: 50px;
@@ -801,12 +801,57 @@ header {
     text-align: center;
 }
 
-.work:hover .work-link {
+.equip:hover .equip-link {
     -webkit-transition-delay: 0.2s;
     transition-delay: 0.2s;
     opacity: 1;
 }
 
+/*------------------------------------*\
+Equipment Modal
+\*------------------------------------*/
+.modal.left .modal-dialog {
+    position: fixed;
+    margin: auto;
+    width: 320px;
+    height: 100%;
+    -webkit-transform: translate3d(0%, 0, 0);
+        -ms-transform: translate3d(0%, 0, 0);
+         -o-transform: translate3d(0%, 0, 0);
+            transform: translate3d(0%, 0, 0);
+  }
+  
+  .modal.left .modal-content {
+    height: 100%;
+    overflow-y: auto;
+  }
+  
+  .modal.left .modal-body  {
+    padding: 15px 15px 80px;
+  }
+  
+  .modal.left.fade .modal-dialog {
+    left: -320px;
+    -webkit-transition: opacity 0.3s linear, left 0.3s ease-out;
+       -moz-transition: opacity 0.3s linear, left 0.3s ease-out;
+         -o-transition: opacity 0.3s linear, left 0.3s ease-out;
+            transition: opacity 0.3s linear, left 0.3s ease-out;
+  }
+  
+  .modal.left.fade.in .modal-dialog {
+    left: 0;
+  }
+  
+  .modal-content {
+    border-radius: 0;
+    border: none;
+  }
+  
+  .modal-header {
+    border-bottom-color: #EEEEEE;
+    background-color: #FAFAFA;
+  }
+  
 
 /*------------------------------------*\
 	Services
@@ -1587,7 +1632,7 @@ header {
 }
 
 @media only screen and (max-width: 480px) {
-  #portfolio [class*='col-xs'] {
+  #equipment [class*='col-xs'] {
 		  width:100%;
 	}
 
