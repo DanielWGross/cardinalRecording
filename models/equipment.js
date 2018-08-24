@@ -1,11 +1,33 @@
 module.exports = (sequelize, DataTypes) => {
   var Equipment = sequelize.define('Equipment', {
-    interfaces: DataTypes.STRING,
-    microphones: DataTypes.STRING,
-    cables: DataTypes.STRING,
-    instruments: DataTypes.STRING,
-    amps: DataTypes.STRING,
-    pedals: DataTypes.STRING
+    name: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    interfaces: {
+      type: DataTypes.BOOLEAN,
+      defaultValue: false
+    },
+    microphones: {
+      type: DataTypes.BOOLEAN,
+      defaultValue: false
+    },
+    cables: {
+      type: DataTypes.BOOLEAN,
+      defaultValue: false
+    },
+    instruments: {
+      type: DataTypes.BOOLEAN,
+      defaultValue: false
+    },
+    amps: {
+      type: DataTypes.BOOLEAN,
+      defaultValue: false
+    },
+    pedals: {
+      type: DataTypes.BOOLEAN,
+      defaultValue: false
+    }
   });
   
   Equipment.associate = (models) => {
