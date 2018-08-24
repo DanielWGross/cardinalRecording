@@ -39,9 +39,9 @@
 
 <body>
 	<!-- Header -->
-	<header id="home">
+	<header id="home-client-hero">
 		<!-- Background Image -->
-		<div class="bg-img" style="background-image: url('./img/background01.jpg');" alt="Photo by chuttersnap on Unsplash">
+		<div class="bg-img bg-grey" style="background-image: url('./img/clients-hero.jpg');" alt="Photo by chuttersnap on Unsplash">
 			<div class="overlay"></div>
 		</div>
 		<!-- /Background Image -->
@@ -69,12 +69,23 @@
 
 				<!--  Main navigation  -->
 				<ul class="main-nav nav navbar-nav navbar-right">
-					<li><a href="index.html">Home</a></li>
-					<li><a href="#">Clients</a></li>
-					<li><a href="equipment.html">Equipment</a></li>
-					<li><a href="contact.html">Contact</a></li>
-					
-					
+					<li>
+						<a href="index.html">Home</a>
+					</li>
+					<li>
+						<a href="services.html">Services</a>
+					</li>
+					<li>
+						<a href="#">Clients</a>
+					</li>
+					<li>
+						<a href="equipment.html">Equipment</a>
+					</li>
+					<li>
+						<a href="contact.html">Contact</a>
+					</li>
+
+
 				</ul>
 				<!-- /Main navigation -->
 
@@ -91,9 +102,10 @@
 					<div class="col-md-10 col-md-offset-1">
 						<div class="home-content">
 							<h1 class="white-text">Cardinal Recording</h1>
-							<p class="white-text">Morbi mattis felis at nunc. Duis viverra diam non justo. In nisl. Nullam sit amet magna in magna gravida vehicula. Mauris tincidunt sem sed arcu. Nunc posuere.
+							<p class="white-text">Morbi mattis felis at nunc. Duis viverra diam non justo. In nisl. Nullam sit amet magna in magna gravida vehicula.
+								Mauris tincidunt sem sed arcu. Nunc posuere.
 							</p>
-							
+
 						</div>
 					</div>
 					<!-- /home content -->
@@ -106,63 +118,8 @@
 	</header>
 	<!-- /Header -->
 
-	<!-- About -->
-	<div id="about" class="section md-padding">
-
-		<!-- Container -->
-		<div class="container">
-
-			<!-- Row -->
-			<div class="row">
-
-				<!-- Section header -->
-				<div class="section-header text-center">
-					<h2 class="title">Welcome to Website</h2>
-				</div>
-				<!-- /Section header -->
-
-				<!-- about -->
-				<div class="col-md-4">
-					<div class="about">
-						<i class="fa fa-cogs"></i>
-						<h3>Fully Customizible</h3>
-						<p>Maecenas tempus tellus eget condimentum rhoncus sem quam semper libero sit amet.</p>
-						<a href="#">Read more</a>
-					</div>
-				</div>
-				<!-- /about -->
-
-				<!-- about -->
-				<div class="col-md-4">
-					<div class="about">
-						<i class="fa fa-magic"></i>
-						<h3>Awesome Features</h3>
-						<p>Maecenas tempus tellus eget condimentum rhoncus sem quam semper libero sit amet.</p>
-						<a href="#">Read more</a>
-					</div>
-				</div>
-				<!-- /about -->
-
-				<!-- about -->
-				<div class="col-md-4">
-					<div class="about">
-						<i class="fa fa-mobile"></i>
-						<h3>Fully Responsive</h3>
-						<p>Maecenas tempus tellus eget condimentum rhoncus sem quam semper libero sit amet.</p>
-						<a href="#">Read more</a>
-					</div>
-				</div>
-				<!-- /about -->
-
-			</div>
-			<!-- /Row -->
-
-		</div>
-		<!-- /Container -->
-
-	</div>
-	<!-- /About -->
-
+	
+				
 
 	<!-- Portfolio -->
 	<div id="portfolio" class="section md-padding bg-grey">
@@ -175,20 +132,24 @@
 
 				<!-- Section header -->
 				<div class="section-header text-center">
-					<h2 class="title">Featured Works</h2>
+					<h2 class="title">Clients</h2>
 				</div>
 				<!-- /Section header -->
 
 				<!-- Work -->
 				<div class="col-md-4 col-xs-6 work">
-					<img class="img-responsive" src="./img/work1.jpg" alt="">
+					<img class="img-responsive" src="./img/jcole.jpg" alt="">
 					<div class="overlay"></div>
 					<div class="work-content">
-						<span>Category</span>
-						<h3>Lorem ipsum dolor</h3>
+						<span>J. Cole</span>
+						<h3>K.O.D.</h3>
 						<div class="work-link">
-							<a href="#"><i class="fa fa-external-link"></i></a>
-							<a class="lightbox" href="./img/work1.jpg"><i class="fa fa-search"></i></a>
+							<a data-toggle="modal" data-target="#modal-jcole">
+								<i class="fa fa-soundcloud"></i>
+							</a>
+							<a class="lightbox" href="./img/jcole.jpg">
+								<i class="fa fa-search"></i>
+							</a>
 						</div>
 					</div>
 				</div>
@@ -196,14 +157,18 @@
 
 				<!-- Work -->
 				<div class="col-md-4 col-xs-6 work">
-					<img class="img-responsive" src="./img/work2.jpg" alt="">
+					<img class="img-responsive" src="./img/group1.jpg" alt="">
 					<div class="overlay"></div>
 					<div class="work-content">
-						<span>Category</span>
-						<h3>Lorem ipsum dolor</h3>
+						<span>Mantra</span>
+						<h3>Bring Me The Horizon</h3>
 						<div class="work-link">
-							<a href="#"><i class="fa fa-external-link"></i></a>
-							<a class="lightbox" href="./img/work2.jpg"><i class="fa fa-search"></i></a>
+							<a data-toggle="modal" data-target="#modal-mantra">
+								<i class="fa fa-soundcloud"></i>
+							</a>
+							<a class="lightbox" href="./img/group1.jpg">
+								<i class="fa fa-search"></i>
+							</a>
 						</div>
 					</div>
 				</div>
@@ -217,8 +182,12 @@
 						<span>Category</span>
 						<h3>Lorem ipsum dolor</h3>
 						<div class="work-link">
-							<a href="#"><i class="fa fa-external-link"></i></a>
-							<a class="lightbox" href="./img/work3.jpg"><i class="fa fa-search"></i></a>
+							<a href="#">
+								<i class="fa fa-external-link"></i>
+							</a>
+							<a class="lightbox" href="./img/work3.jpg">
+								<i class="fa fa-search"></i>
+							</a>
 						</div>
 					</div>
 				</div>
@@ -232,8 +201,12 @@
 						<span>Category</span>
 						<h3>Lorem ipsum dolor</h3>
 						<div class="work-link">
-							<a href="#"><i class="fa fa-external-link"></i></a>
-							<a class="lightbox" href="./img/work4.jpg"><i class="fa fa-search"></i></a>
+							<a href="#">
+								<i class="fa fa-external-link"></i>
+							</a>
+							<a class="lightbox" href="./img/work4.jpg">
+								<i class="fa fa-search"></i>
+							</a>
 						</div>
 					</div>
 				</div>
@@ -247,8 +220,12 @@
 						<span>Category</span>
 						<h3>Lorem ipsum dolor</h3>
 						<div class="work-link">
-							<a href="#"><i class="fa fa-external-link"></i></a>
-							<a class="lightbox" href="./img/work5.jpg"><i class="fa fa-search"></i></a>
+							<a href="#">
+								<i class="fa fa-external-link"></i>
+							</a>
+							<a class="lightbox" href="./img/work5.jpg">
+								<i class="fa fa-search"></i>
+							</a>
 						</div>
 					</div>
 				</div>
@@ -262,8 +239,12 @@
 						<span>Category</span>
 						<h3>Lorem ipsum dolor</h3>
 						<div class="work-link">
-							<a href="#"><i class="fa fa-external-link"></i></a>
-							<a class="lightbox" href="./img/work6.jpg"><i class="fa fa-search"></i></a>
+							<a href="#">
+								<i class="fa fa-external-link"></i>
+							</a>
+							<a class="lightbox" href="./img/work6.jpg">
+								<i class="fa fa-search"></i>
+							</a>
 						</div>
 					</div>
 				</div>
@@ -278,165 +259,11 @@
 	</div>
 	<!-- /Portfolio -->
 
-	<!-- Service -->
-	<div id="service" class="section md-padding">
-
-		<!-- Container -->
-		<div class="container">
-
-			<!-- Row -->
-			<div class="row">
-
-				<!-- Section header -->
-				<div class="section-header text-center">
-					<h2 class="title">What we offer</h2>
-				</div>
-				<!-- /Section header -->
-
-				<!-- service -->
-				<div class="col-md-4 col-sm-6">
-					<div class="service">
-						<i class="fa fa-diamond"></i>
-						<h3>App Development</h3>
-						<p>Maecenas tempus tellus eget condimentum rhoncus sem quam semper libero.</p>
-					</div>
-				</div>
-				<!-- /service -->
-
-				<!-- service -->
-				<div class="col-md-4 col-sm-6">
-					<div class="service">
-						<i class="fa fa-rocket"></i>
-						<h3>Graphic Design</h3>
-						<p>Maecenas tempus tellus eget condimentum rhoncus sem quam semper libero.</p>
-					</div>
-				</div>
-				<!-- /service -->
-
-				<!-- service -->
-				<div class="col-md-4 col-sm-6">
-					<div class="service">
-						<i class="fa fa-cogs"></i>
-						<h3>Creative Idea</h3>
-						<p>Maecenas tempus tellus eget condimentum rhoncus sem quam semper libero.</p>
-					</div>
-				</div>
-				<!-- /service -->
-
-				<!-- service -->
-				<div class="col-md-4 col-sm-6">
-					<div class="service">
-						<i class="fa fa-diamond"></i>
-						<h3>Marketing</h3>
-						<p>Maecenas tempus tellus eget condimentum rhoncus sem quam semper libero.</p>
-					</div>
-				</div>
-				<!-- /service -->
-
-				<!-- service -->
-				<div class="col-md-4 col-sm-6">
-					<div class="service">
-						<i class="fa fa-pencil"></i>
-						<h3>Awesome Support</h3>
-						<p>Maecenas tempus tellus eget condimentum rhoncus sem quam semper libero.</p>
-					</div>
-				</div>
-				<!-- /service -->
-
-				<!-- service -->
-				<div class="col-md-4 col-sm-6">
-					<div class="service">
-						<i class="fa fa-flask"></i>
-						<h3>Brand Design</h3>
-						<p>Maecenas tempus tellus eget condimentum rhoncus sem quam semper libero.</p>
-					</div>
-				</div>
-				<!-- /service -->
-
-			</div>
-			<!-- /Row -->
-
-		</div>
-		<!-- /Container -->
-
-	</div>
-	<!-- /Service -->
-
-
-	<!-- Why Choose Us -->
-	<div id="features" class="section md-padding bg-grey">
-
-		<!-- Container -->
-		<div class="container">
-
-			<!-- Row -->
-			<div class="row">
-
-				<!-- why choose us content -->
-				<div class="col-md-6">
-					<div class="section-header">
-						<h2 class="title">Why Choose Us</h2>
-					</div>
-					<p>Molestie at elementum eu facilisis sed odio. Scelerisque in dictum non consectetur a erat. Aliquam id diam maecenas ultricies mi eget mauris. Ultrices sagittis orci a scelerisque purus.</p>
-					<div class="feature">
-						<i class="fa fa-check"></i>
-						<p>Quis varius quam quisque id diam vel quam elementum.</p>
-					</div>
-					<div class="feature">
-						<i class="fa fa-check"></i>
-						<p>Mauris augue neque gravida in fermentum.</p>
-					</div>
-					<div class="feature">
-						<i class="fa fa-check"></i>
-						<p>Orci phasellus egestas tellus rutrum.</p>
-					</div>
-					<div class="feature">
-						<i class="fa fa-check"></i>
-						<p>Nec feugiat nisl pretium fusce id velit ut tortor pretium.</p>
-					</div>
-				</div>
-				<!-- /why choose us content -->
-
-				<!-- About slider -->
-				<div class="col-md-6">
-					<div id="about-slider" class="owl-carousel owl-theme">
-						<img class="img-responsive" src="./img/about1.jpg" alt="">
-						<img class="img-responsive" src="./img/about2.jpg" alt="">
-						<img class="img-responsive" src="./img/about1.jpg" alt="">
-						<img class="img-responsive" src="./img/about2.jpg" alt="">
-					</div>
-				</div>
-				<!-- /About slider -->
-
-			</div>
-			<!-- /Row -->
-
-		</div>
-		<!-- /Container -->
-
-	</div>
-	<!-- /Why Choose Us -->
+	
+	
 
 
 	
-			</div>
-			<!-- /Row -->
-
-		</div>
-		<!-- /Container -->
-
-	</div>
-	<!-- /Numbers -->
-
-	
-			</div>
-			<!-- Row -->
-
-		</div>
-		<!-- /Container -->
-
-	</div>
-	<!-- /Pricing -->
 
 
 	<!-- Testimonial -->
@@ -465,7 +292,8 @@
 								<h3 class="white-text">John Doe</h3>
 								<span>Web Designer</span>
 							</div>
-							<p class="white-text">Molestie at elementum eu facilisis sed odio. Scelerisque in dictum non consectetur a erat. Aliquam id diam maecenas ultricies mi eget mauris.</p>
+							<p class="white-text">Molestie at elementum eu facilisis sed odio. Scelerisque in dictum non consectetur a erat. Aliquam id diam maecenas
+								ultricies mi eget mauris.</p>
 						</div>
 						<!-- /testimonial -->
 
@@ -476,7 +304,8 @@
 								<h3 class="white-text">John Doe</h3>
 								<span>Web Designer</span>
 							</div>
-							<p class="white-text">Molestie at elementum eu facilisis sed odio. Scelerisque in dictum non consectetur a erat. Aliquam id diam maecenas ultricies mi eget mauris.</p>
+							<p class="white-text">Molestie at elementum eu facilisis sed odio. Scelerisque in dictum non consectetur a erat. Aliquam id diam maecenas
+								ultricies mi eget mauris.</p>
 						</div>
 						<!-- /testimonial -->
 
@@ -493,112 +322,7 @@
 	</div>
 	<!-- /Testimonial -->
 
-	<!-- Team -->
-	<div id="team" class="section md-padding">
-
-		<!-- Container -->
-		<div class="container">
-
-			<!-- Row -->
-			<div class="row">
-
-				<!-- Section header -->
-				<div class="section-header text-center">
-					<h2 class="title">Our Team</h2>
-				</div>
-				<!-- /Section header -->
-
-				<!-- team -->
-				<div class="col-sm-4">
-					<div class="team">
-						<div class="team-img">
-							<img class="img-responsive" src="./img/team1.jpg" alt="">
-							<div class="overlay">
-								<div class="team-social">
-									<a href="#"><i class="fa fa-facebook"></i></a>
-									<a href="#"><i class="fa fa-google-plus"></i></a>
-									<a href="#"><i class="fa fa-twitter"></i></a>
-								</div>
-							</div>
-						</div>
-						<div class="team-content">
-							<h3>John Doe</h3>
-							<span>Web Designer</span>
-						</div>
-					</div>
-				</div>
-				<!-- /team -->
-
-				<!-- team -->
-				<div class="col-sm-4">
-					<div class="team">
-						<div class="team-img">
-							<img class="img-responsive" src="./img/team2.jpg" alt="">
-							<div class="overlay">
-								<div class="team-social">
-									<a href="#"><i class="fa fa-facebook"></i></a>
-									<a href="#"><i class="fa fa-google-plus"></i></a>
-									<a href="#"><i class="fa fa-twitter"></i></a>
-								</div>
-							</div>
-						</div>
-						<div class="team-content">
-							<h3>John Doe</h3>
-							<span>Web Designer</span>
-						</div>
-					</div>
-				</div>
-				<!-- /team -->
-
-				<!-- team -->
-				<div class="col-sm-4">
-					<div class="team">
-						<div class="team-img">
-							<img class="img-responsive" src="./img/team3.jpg" alt="">
-							<div class="overlay">
-								<div class="team-social">
-									<a href="#"><i class="fa fa-facebook"></i></a>
-									<a href="#"><i class="fa fa-google-plus"></i></a>
-									<a href="#"><i class="fa fa-twitter"></i></a>
-								</div>
-							</div>
-						</div>
-						<div class="team-content">
-							<h3>John Doe</h3>
-							<span>Web Designer</span>
-						</div>
-					</div>
-				</div>
-				<!-- /team -->
-
-			</div>
-			<!-- /Row -->
-
-		</div>
-		<!-- /Container -->
-
-	</div>
-	<!-- /Team -->
-
-	\
-			</div>
-			<!-- /Row -->
-
-		</div>
-		<!-- /Container -->
-
-	</div>
-	<!-- /Blog -->
-
-			</div>
-			<!-- /Row -->
-
-		</div>
-		<!-- /Container -->
-
-	</div>
-	<!-- /Contact -->
-
+	
 
 	<!-- Footer -->
 	<footer id="footer" class="sm-padding bg-dark">
@@ -613,22 +337,42 @@
 
 					<!-- footer logo -->
 					<div class="footer-logo">
-						<a href="index.html"><img src="img/logo-alt.png" alt="logo"></a>
+						<a href="index.html">
+							<img src="img/logo-lg.jpg" alt="logo">
+						</a>
 					</div>
 					<!-- /footer logo -->
 
 					<!-- footer follow -->
 					<ul class="footer-follow">
-						<li><a href="https://www.facebook.com/cardinalrecordings/" target="_blank"><i class="fa fa-facebook"></i></a></li>
-						<li><a href="https://soundcloud.com/cardinal-recordings" target="_blank"><i class="fa fa-instagram"></i></a></li>
-                        <li><a href="https://www.instagram.com/cardinalrecordings/?hl=en" target="_blank"><i class="fa fa-soundcloud"></i></a></li>
-                        <li><a href="mailto:CardinalRecBooking@gmail.com" target="_blank"><i class="fa fa-envelope"></i></a></li>
+						<li>
+							<a href="https://www.facebook.com/cardinalrecordings/" target="_blank">
+								<i class="fa fa-facebook"></i>
+							</a>
+						</li>
+						<li>
+							<a href="https://soundcloud.com/cardinal-recordings" target="_blank">
+								<i class="fa fa-instagram"></i>
+							</a>
+						</li>
+						<li>
+							<a href="https://www.instagram.com/cardinalrecordings/?hl=en" target="_blank">
+								<i class="fa fa-soundcloud"></i>
+							</a>
+						</li>
+						<li>
+							<a href="mailto:CardinalRecBooking@gmail.com" target="_blank">
+								<i class="fa fa-envelope"></i>
+							</a>
+						</li>
 					</ul>
 					<!-- /footer follow -->
 
 					<!-- footer copyright -->
 					<div class="footer-copyright">
-						<p>Copyright © 2017. All Rights Reserved. Designed by <a href="https://colorlib.com" target="_blank">Colorlib</a></p>
+						<p>Copyright © 2017. All Rights Reserved. Designed by
+							<a href="https://colorlib.com" target="_blank">Colorlib</a>
+						</p>
 					</div>
 					<!-- /footer copyright -->
 
@@ -657,12 +401,41 @@
 		</div>
 	</div>
 	<!-- /Preloader -->
+	<!-- Modals-->
+	<!-- Modal #1-->
+	<div id="modal">
+		<!-- <button type="button" class="btn btn-dark" data-toggle="modal" data-target=".bd-modal-lg"></button> -->
 
+		<div class="modal fade" id="modal-jcole" tabindex="-1" role="dialog" aria-labelledby="soundcloud" aria-hidden="true">
+			<div class="modal-dialog modal-lg">
+				<div class="modal-body">
+
+					<iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/432431442&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- /End Modal #1-->
+	<!-- Modal #2-->
+	<div id="modal">
+		<!-- <button type="button" class="btn btn-dark" data-toggle="modal" data-target=".bd-modal-lg"></button> -->
+
+		<div class="modal fade" id="modal-mantra" tabindex="-1" role="dialog" aria-labelledby="soundcloud" aria-hidden="true">
+			<div class="modal-dialog modal-lg">
+				<div class="modal-body">
+
+					<iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/488135934&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- /End Modal #2-->
+	<!-- /End Modals-->
 	<!-- jQuery Plugins -->
 	<script type="text/javascript" src="js/jquery.min.js"></script>
-	<script type="text/javascript" src="js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="js/owl.carousel.min.js"></script>
 	<script type="text/javascript" src="js/jquery.magnific-popup.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
 
 </body>
