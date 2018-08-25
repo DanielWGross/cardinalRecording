@@ -1,0 +1,56 @@
+<!-- Clients -->
+<div id="portfolio" class="section md-padding bg-grey">
+
+	<!-- Container -->
+	<div class="container">
+
+		<!-- Row -->
+		<div class="row">
+
+				<!-- Section header -->
+				<div class="section-header text-center">
+					<h2 class="title">Clients</h2>
+				</div>
+				<!-- /Section header -->
+
+        <!-- Work -->
+        {{#each clients}}
+          <div class="col-md-4 col-xs-6 work" data-id={{this.id}}>
+	          <img class="img-responsive" src={{this.picture_url}} alt="{{this.name}}_img">
+	          <div class="overlay"></div>
+	          <div class="work-content">
+		          <span>{{this.name}}</span>
+		          <h3></h3>
+		          <div class="work-link">
+			          <a data-toggle="modal" data-target="#modal-{{this.id}}">
+				          <i class="fa fa-soundcloud"></i>
+			          </a>
+			          <a class="lightbox" href={{this.picture_url}}>
+				          <i class="fa fa-search"></i>
+			          </a>
+		          </div>
+	          </div>
+          </div>
+        {{/each}}
+        <!-- /Work -->
+
+	  </div>
+		<!-- /Row -->
+
+	</div>
+	<!-- /Container -->
+
+</div>
+<!-- /Clients -->
+
+<!-- Modal -->
+{{#each clients}}
+	<div class="modal fade" id="modal-{{this.id}}" tabindex="-1" role="dialog" aria-labelledby="soundcloud" aria-hidden="true">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-body">
+				<iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src={{this.soundcloud_url}}></iframe>
+			</div>
+		</div>
+	</div>
+{{/each}}
+<!-- /End Modal -->
