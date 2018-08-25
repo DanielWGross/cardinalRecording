@@ -14,11 +14,9 @@ module.exports = (app) => {
       return res.render('services');
       case ('equipment'):
       return db.Equipment.findAll({
-        raw: true,
-        include: [ db.Plugin ]
+        raw: true
       }).then((equipment) => {
-        console.log(equipment);
-        res.json(equipment);
+        res.render('equipment');
       });
       case ('clients'):
       return db.Client.findAll({
