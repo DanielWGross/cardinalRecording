@@ -14,14 +14,19 @@ module.exports = (app) => {
       return res.render('services');
       case ('equipment'):
       return db.Equipment.findAll({
+        raw: true,
         include: [ db.Plugin ]
       }).then((equipment) => {
+        console.log(equipment);
         res.json(equipment);
       });
-
       case ('clients'):
-      return db.Client.findAll({}).then((clients) => {
-        res.render('clients');
+      return db.Client.findAll({
+        raw: true
+      }).then((clients) => {
+        res.render('clients', {
+          clients: clients
+        });
       });
       case ('contact'):
       return res.render('contact');
