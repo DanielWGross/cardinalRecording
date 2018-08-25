@@ -915,6 +915,12 @@ Equipment Modal
     margin-right: 5px;
 }
 
+.feature {
+  background:rgba(top, 254,254,254,1) 20%;
+  background: linear-gradient(rgb(254, 253, 253) 15%, rgba(149,148,149,1) 45%, rgba(8,7,8,1) 89%);
+
+  }
+
 /*------------------------------------*\
 	Numbers
 \*------------------------------------*/
