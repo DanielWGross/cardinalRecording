@@ -1,38 +1,73 @@
 module.exports = (sequelize, DataTypes) => {
-  var Equipment = sequelize.define('Equipment', {
+  const Equipment = sequelize.define('Equipment', {
     name: {
       type: DataTypes.STRING,
       allowNull: false
     },
-    interfaces: {
+    interface: {
       type: DataTypes.BOOLEAN,
       defaultValue: false
     },
-    microphones: {
+    mic_preamp: {
       type: DataTypes.BOOLEAN,
       defaultValue: false
     },
-    cables: {
+    monitor: {
       type: DataTypes.BOOLEAN,
       defaultValue: false
     },
-    instruments: {
+    plugin_effects: {
       type: DataTypes.BOOLEAN,
       defaultValue: false
     },
-    amps: {
+    plugin_package: {
       type: DataTypes.BOOLEAN,
       defaultValue: false
     },
-    pedals: {
+    plugin_waves: {
       type: DataTypes.BOOLEAN,
       defaultValue: false
-    }
+    },
+    plugin_slate_digital: {
+      type: DataTypes.BOOLEAN,
+      defaultValue: false
+    },
+    plugin_fab_filter: {
+      type: DataTypes.BOOLEAN,
+      defaultValue: false
+    },
+    plugin_izotope: {
+      type: DataTypes.BOOLEAN,
+      defaultValue: false
+    },
+    plugin_soundtoys: {
+      type: DataTypes.BOOLEAN,
+      defaultValue: false
+    },
+    microphone: {
+      type: DataTypes.BOOLEAN,
+      defaultValue: false
+    },
+    cable: {
+      type: DataTypes.BOOLEAN,
+      defaultValue: false
+    },
+    instrument: {
+      type: DataTypes.BOOLEAN,
+      defaultValue: false
+    },
+    amp: {
+      type: DataTypes.BOOLEAN,
+      defaultValue: false
+    },
+    cab: {
+      type: DataTypes.BOOLEAN,
+      defaultValue: false
+    },
+    pedal: {
+      type: DataTypes.BOOLEAN,
+      defaultValue: false
+    },
   });
-  
-  Equipment.associate = (models) => {
-    models.Equipment.hasMany(models.Plugin); 
-  };
-
   return Equipment;
 };
