@@ -8,33 +8,28 @@ module.exports = (app) => {
 
   // navigate between pages from the navbar
   app.get('/:page', (req, res) => {
-    var page = req.params.page;
+    const page = req.params.page;
     switch(page) {
       case ('services'):
-      return res.render('services');
+        return res.render('services');
       case ('equipment'):
-      return db.Equipment.findAll({
-        raw: true
-      }).then((equipment) => {
-        res.render('equipment');
-      });
-      case ('clients'):
-      return db.Client.findAll({
-        raw: true
-      }).then((clients) => {
-        res.render('clients', {
-          clients: clients
+        return db.Equipment.findAll({
+          raw: true
+        }).then((equipment) => {
+          res.render('equipment');
         });
-      });
+      case ('clients'):
+        return db.Client.findAll({
+          raw: true
+        }).then((clients) => {
+          res.render('clients', {
+            clients: clients
+          });
+        });
       case ('contact'):
-      return res.render('contact');
-      case ('default'):
-      return res.redirect('/');
+        return res.render('contact');
+      default:
+        return res.render('404', {layout: false})
     }
-  });
-
-  // Render 404 page for any unmatched routes
-  app.get('*', (req, res) => {
-    res.render('404');
   });
 };
