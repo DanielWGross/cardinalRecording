@@ -370,8 +370,7 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focu
         position: relative;
     }
     .has-dropdown>a:before {
-        /* font-family: 'FontAwesome'; */
-        font-family: 'Nanum Gothic', sans-serif;
+        font-family: 'FontAwesome';
         content: "\f054";
         font-size: 6px;
         margin-left: 6px;
@@ -483,8 +482,7 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focu
     }
     .has-dropdown>a:after {
         content: "\f054";
-        /* font-family: 'FontAwesome'; */
-        font-family: 'Nanum Gothic', sans-serif;
+        font-family: 'FontAwesome';
         float: right;
         -webkit-transition: 0.2s -webkit-transform;
         transition: 0.2s -webkit-transform;
@@ -1716,8 +1714,7 @@ Equipment Modal
 
 #back-to-top:after {
     content: "\f106";
-    /* font-family: 'FontAwesome'; */
-    font-family: 'Nanum Gothic', sans-serif;
+    font-family: 'FontAwesome';
 
 }
 
