@@ -16,6 +16,10 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.BOOLEAN,
       defaultValue: false
     },
+    headphone: {
+      type: DataTypes.BOOLEAN,
+      defaultValue: false
+    },
     plugin_effects: {
       type: DataTypes.BOOLEAN,
       defaultValue: false
@@ -52,7 +56,19 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.BOOLEAN,
       defaultValue: false
     },
-    instrument: {
+    instrument_guitar: {
+      type: DataTypes.BOOLEAN,
+      defaultValue: false
+    },
+    instrument_bass: {
+      type: DataTypes.BOOLEAN,
+      defaultValue: false
+    },
+    instrument_drum: {
+      type: DataTypes.BOOLEAN,
+      defaultValue: false
+    },
+    instrument_midi: {
       type: DataTypes.BOOLEAN,
       defaultValue: false
     },
