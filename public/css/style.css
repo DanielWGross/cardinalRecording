@@ -322,8 +322,8 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focu
     left: 0;
     right: 0;
     padding: 0px 0px;
-    background-color: #FFF !important;
-    border-bottom: 1px solid #EEE;
+    background-color: black !important;
+    /* border-bottom: 1px solid #EEE; */
 }
 
 #nav.nav-transparent {
@@ -343,7 +343,7 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focu
         transition: 0.2s color;
     }
     .main-nav>li>a {
-        color: #10161A;
+        color: white;
         padding: 15px 0px;
     }
     #nav.nav-transparent:not(.fixed-nav) .main-nav>li>a {
@@ -668,7 +668,7 @@ header {
 
 .about:after {
     content: "";
-    background-color: #1C1D21;
+    background-color: #bd2031;
     position: absolute;
     left: 0;
     top: 0;
@@ -915,11 +915,10 @@ Equipment Modal
     margin-right: 5px;
 }
 
-.feature {
+/* .feature {
   background:rgba(top, 254,254,254,1) 20%;
   background: linear-gradient(rgb(254, 253, 253) 15%, rgba(149,148,149,1) 45%, rgba(8,7,8,1) 89%);
-
-  }
+  } */
 
 /*------------------------------------*\
 	Numbers
@@ -1683,69 +1682,6 @@ Equipment Modal
   }
 }
 
-
-
-/*------------------------------------*\
-	Owl theme
-\*------------------------------------*/
-
-/* -- dots -- */
-
-.owl-theme .owl-dots .owl-dot span {
-    border: none;
-    background: #EEE;
-    -webkit-transition: 0.2s all;
-    transition: 0.2s all;
-}
-
-.owl-theme .owl-dots .owl-dot:hover span {
-    background: #bd2031;
-}
-.owl-theme .owl-dots .owl-dot.active span {
-	  background: #bd2031;
-	  width:20px;
-}
-
-/* -- nav -- */
-
-.owl-theme .owl-nav {
-    opacity: 0;
-    -webkit-transition: 0.2s opacity;
-    transition: 0.2s opacity;
-}
-
-.owl-theme:hover .owl-nav {
-    opacity: 1;
-}
-
-.owl-theme .owl-nav [class*='owl-'] {
-    position: absolute;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-        -ms-transform: translateY(-50%);
-            transform: translateY(-50%);
-    background: #bd2031;
-    color: #FFF;
-  	padding: 0px;
-  	width: 50px;
-  	height: 50px;
-  	border-radius:3px;
-  	line-height: 50px;
-  	margin: 0;
-}
-
-.owl-theme .owl-prev {
-    left: 0px;
-}
-
-.owl-theme .owl-next {
-    right: 0px;
-}
-
-.owl-theme .owl-nav [class*='owl-']:hover {
-    opacity: 0.8;
-    background: #bd2031;
-}
 
 
 /*------------------------------------*\
