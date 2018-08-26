@@ -156,6 +156,19 @@ VALUES ('Classic Wah', 1);
 INSERT INTO Equipment (name, pedals)
 VALUES ('Ebow', 1);
 
+-- Clients
 
+INSERT INTO Clients (name, picture_url, soundcloud_url)
+VALUES ('Andorra', "img/andorra.jpg", "https://soundcloud.com/cardinal-recordings/elephants");
 
+INSERT INTO Clients (name, picture_url, soundcloud_url)
+VALUES ('Daddylap', "img/daddylap.jpg", "https://soundcloud.com/cardinal-recordings/submerged?in=cardinal-recordings/sets/clients");
 
+INSERT INTO Clients (name, picture_url, soundcloud_url)
+VALUES ('Here : Now', "img/here_now.jpg", "https://soundcloud.com/cardinal-recordings/dont-move?in=cardinal-recordings/sets/clients");
+
+INSERT INTO Clients (name, picture_url, soundcloud_url)
+VALUES ('Steve Sheets', "img/steve_sheets.jpg", "https://soundcloud.com/cardinal-recordings/all-i-know?in=cardinal-recordings/sets/clients");
+
+INSERT INTO Clients (name, picture_url, soundcloud_url)
+VALUES ('Taking October', "img/taking_october.jpg", "https://soundcloud.com/cardinal-recordings/bullet-dreams");
