@@ -183,4 +183,6 @@ VALUES  ('Andorra', "img/andorra.jpg", "https://soundcloud.com/cardinal-recordin
         ('Daddylap', "img/daddylap.jpg", "https://soundcloud.com/cardinal-recordings/submerged?in=cardinal-recordings/sets/clients"),
         ('Here : Now', "img/here_now.jpg", "https://soundcloud.com/cardinal-recordings/dont-move?in=cardinal-recordings/sets/clients"),
         ('Steve Sheets', "img/steve_sheets.jpg", "https://soundcloud.com/cardinal-recordings/all-i-know?in=cardinal-recordings/sets/clients"),
-        ('Taking October', "img/taking_october.jpg", "https://soundcloud.com/cardinal-recordings/bullet-dreams");
+        ('Taking October', "img/taking_october.jpg", "https://soundcloud.com/cardinal-recordings/bullet-dreams"),
+        ('Andorra: Etc, Etc, Etc', "img/andorra_2.jpg", "https://soundcloud.com/cardinal-recordings/elephants"),
+        ('Taking October: Sleeping With Ghosts', "img/taking_october_2.jpg", "https://soundcloud.com/cardinal-recordings/bullet-dreams");
