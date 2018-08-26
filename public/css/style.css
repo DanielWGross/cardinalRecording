@@ -9,7 +9,7 @@ Colors:
 	Dark      : #FCFCFF
 	Grey 		  : #F4F4F4 #FAFAFA #EEE
 
-Fonts: Montserrat Varela Round
+Fonts: Nanum Gothic
 
 Table OF Contents
 ------------------------------------
@@ -46,7 +46,7 @@ Table OF Contents
 /* -- typography -- */
 
 body {
-    font-family: 'Varela Round', sans-serif;
+    font-family: 'Nanum Gothic', sans-serif;
     font-size: 16px;
     line-height: 1.6;
     overflow-x: hidden;
@@ -55,7 +55,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Nanum Gothic', sans-serif;
     font-weight: 700;
     margin-top: 0px;
     margin-bottom: 20px;
@@ -322,7 +322,7 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focu
     left: 0;
     right: 0;
     padding: 0px 0px;
-    background-color: black !important;
+    background-color: #10161A !important;
     /* border-bottom: 1px solid #EEE; */
 }
 
@@ -343,7 +343,7 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focu
         transition: 0.2s color;
     }
     .main-nav>li>a {
-        color: white;
+        color: #fff;
         padding: 15px 0px;
     }
     #nav.nav-transparent:not(.fixed-nav) .main-nav>li>a {
@@ -370,7 +370,8 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focu
         position: relative;
     }
     .has-dropdown>a:before {
-        font-family: 'FontAwesome';
+        /* font-family: 'FontAwesome'; */
+        font-family: 'Nanum Gothic', sans-serif;
         content: "\f054";
         font-size: 6px;
         margin-left: 6px;
@@ -482,7 +483,8 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focu
     }
     .has-dropdown>a:after {
         content: "\f054";
-        font-family: 'FontAwesome';
+        /* font-family: 'FontAwesome'; */
+        font-family: 'Nanum Gothic', sans-serif;
         float: right;
         -webkit-transition: 0.2s -webkit-transform;
         transition: 0.2s -webkit-transform;
@@ -845,13 +847,19 @@ Equipment Modal
   .modal-content {
     border-radius: 0;
     border: none;
+    background-color: #666666;
+    color:#fff;
   }
   
   .modal-header {
-    border-bottom-color: #EEEEEE;
-    background-color: #FAFAFA;
+    border-bottom-color: #10161A;
+    background-color: #bd2031;
   }
-  
+
+  .modal-body li {
+    list-style-type: disc;
+    margin-left: 15px;
+  }
 
 /*------------------------------------*\
 	Services
@@ -1708,7 +1716,9 @@ Equipment Modal
 
 #back-to-top:after {
     content: "\f106";
-    font-family: 'FontAwesome';
+    /* font-family: 'FontAwesome'; */
+    font-family: 'Nanum Gothic', sans-serif;
+
 }
 
 #back-to-top:hover {
