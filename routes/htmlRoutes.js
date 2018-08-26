@@ -16,7 +16,9 @@ module.exports = (app) => {
         return db.Equipment.findAll({
           raw: true
         }).then((equipment) => {
-          res.render('equipment');
+          res.render('equipment', {
+            equipment: equipment
+          });
         });
       case ('clients'):
         return db.Client.findAll({
