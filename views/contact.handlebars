@@ -1,27 +1,66 @@
-<div class="container">
-  <div class="row">
-    <div class="col-8 offset-2">
-      <div class="card mt-4">
-        <div class="card-body">
-          <h5 class="card-title"> CONTACT US</h5>
-          <p>
-          <form action="/contact" id="contact" {{this.body}} method="POST">
-            <strong>Name</strong>:<input type="text" id="name"> {{this.body.name}}</input>
-          </p>
-          <p>
-          <p>
-            <strong>Phone</strong></p><input type="tel" id="phone"> {{this.body.number}}</input>
-          <p>
-            <strong>Email:</strong></p><input type="email" id="email"> {{this.body.number}}</input>
-          <p>
-            <strong>Message:</strong> 
-            <textarea type="text" id="message">{{this.body.message}}</textarea>
-            </p>
-          </form>
-            <a href="/">← Back To Home</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
- 
+
+	<!-- Contact -->
+	<div id="contact" class="section md-padding">
+
+		<!-- Container -->
+		<div class="container">
+
+			<!-- Row -->
+			<div class="row">
+
+				<!-- Section-header -->
+				<div class="section-header text-center">
+					<h2 class="title">Get in touch</h2>
+				</div>
+				<!-- /Section-header -->
+
+				<!-- contact -->
+				<div class="col-sm-4">
+					<div class="contact">
+						<i class="fa fa-instagram"></i>
+						<h3>Instagram</h3>
+						<p>Follow us on Instagram</p>
+					</div>
+				</div>
+				<!-- /contact -->
+
+				<!-- contact -->
+				<div class="col-sm-4">
+					<div class="contact">
+						<i class="fa fa-envelope"></i>
+						<h3>Email</h3>
+						<p>CardinalRecBooking@gmail.com</p>
+					</div>
+				</div>
+				<!-- /contact -->
+
+				<!-- contact -->
+				<div class="col-sm-4">
+					<div class="contact">
+						<i class="fa fa-facebook-square"></i>
+						<h3>facebook</h3>
+						<p>Like us on Facebook</p>
+					</div>
+				</div>
+				<!-- /contact -->
+
+				<!-- contact form -->
+				<div class="col-md-8 col-md-offset-2">
+					<form class="contact-form">
+						<input type="text" class="input" id="name" placeholder="Name">
+						<input type="email" class="input" id="email" placeholder="Email">
+						<input type="text" class="input" id="subject" placeholder="Subject">
+						<textarea class="input" id="message" placeholder="Message"></textarea>
+						<button class="main-btn">Send message</button>
+					</form>
+				</div>
+				<!-- /contact form -->
+
+			</div>
+			<!-- /Row -->
+
+		</div>
+		<!-- /Container -->
+
+	</div>
+	<!-- /Contact -->
