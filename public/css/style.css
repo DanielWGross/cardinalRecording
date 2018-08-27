@@ -802,6 +802,10 @@ header {
     opacity: 1;
 }
 
+.equip-img-fix {
+    transform: rotate(90deg);
+}
+
 /*------------------------------------*\
 Equipment Modal
 \*------------------------------------*/
