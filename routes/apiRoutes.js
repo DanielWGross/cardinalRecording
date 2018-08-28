@@ -1,5 +1,4 @@
 const db = require('../models');
-const nodemailer = require('../controllers/mailer');
 
 module.exports = (app) => {
   // GET All Equipment
