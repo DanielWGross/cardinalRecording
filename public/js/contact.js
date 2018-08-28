@@ -14,7 +14,8 @@ const API = {
   }
 };
 // Logic to handle the click event on the submit button
-const handleSubmit = (event) => {
+const handleSubmit = (event => {
+  console.log("Test");
   event.preventDefault();
 
   const newContact = {
@@ -31,6 +32,6 @@ const handleSubmit = (event) => {
     document.querySelector('#subject').value = "";
     document.querySelector('#message').value = "";
   });
-};
+});
 // Event handlers
 submitButton.addEventListener("click", handleSubmit);
