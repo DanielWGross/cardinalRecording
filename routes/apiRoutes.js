@@ -1,4 +1,5 @@
 const db = require('../models');
+const nodemailer = require('../controllers/mailer');
 
 module.exports = (app) => {
   // GET All Equipment
@@ -17,9 +18,9 @@ module.exports = (app) => {
   });
   // POST Contact Form
   app.post('/contact', (req, res) => {
-    db.Contact.create(req.body)
+    console.log(req.body)
     .then((dbContact) => {
-      res.json(dbContact);
+      // res.json(dbContact);
     });
   });
 };
