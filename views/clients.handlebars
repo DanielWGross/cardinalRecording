@@ -20,17 +20,19 @@
                   <h3>{{this.name}}</h3>
                   <!-- Equipment Link -->
                   <div class="equip-link">
-                      <a data-toggle="modal" data-target="#{{this.name}}modal" ><i class="fa fa-search"></i></a>
+                      <a data-toggle="modal" data-target="#{{this.id}}modal" ><i class="fa fa-search"></i></a>
                   </div>
                   <!-- /Equipment Link -->
               </div>
               <!-- /Equipment Content -->
           </div>
           <!-- /Equipment-->
+
 {{/each}}
+</div>
 {{#each clients}}
 <!-- Microphone Modal -->
-<div class="modal left fade" id="testmodal" tabindex="-1" role="dialog" aria-labelledby="testmodal">
+<div class="modal left fade" id="{{this.id}}modal" tabindex="-1" role="dialog" aria-labelledby="{{this.id}}modal">
   <!-- Modal Dialog -->
   <div class="modal-dialog" role="document">
       <!-- Modal Content -->
@@ -38,13 +40,13 @@
           <!-- Modal Header -->
           <div class="modal-header">
               <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-              <h4 class="modal-title text-center" id="testmodal">Test:</h4>
+              <h4 class="modal-title text-center" id="{{this.id}}modal">Test:</h4>
           </div>
           <!-- /Modal Header -->
           <!-- Modal Body -->
           <div class="modal-body">
 						{{!-- Microphones --}}
-						<h5 class="white-text">Microphones:</h5>
+						<h5 class="white-text">{{this.name}}</h5>
 						{{!-- /Microphones --}}
           </div>
           <!-- /Modal Body -->
