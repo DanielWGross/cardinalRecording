@@ -4,23 +4,21 @@ const nodemailer = require('nodemailer');
 // Generate test SMTP service account from ethereal.email
 // Only needed if you don't have a real mail account for testing
 const mailer = {
-  sendEmail: (contactForm, cb) => {
+  sendEmail: (contactForm) => {
     nodemailer.createTestAccount((err, account) => {
-      // create reusable transporter object using the default SMTP transport
+      // create transporter object
       let transporter = nodemailer.createTransport({
-        host: 'smtp.ethereal.email',
-        port: 587,
-        secure: false, // true for 465, false for other ports
+        service: 'gmail', // we need to enter cardinal recordings email info here
         auth: {
-            user: account.user, // generated ethereal user
-            pass: account.pass // generated ethereal password
+            user: '', // cardinal recordings email  (save this in an env)
+            pass: '' // cardinal recordings password (")
         }
     });
   
     // setup email data with unicode symbols
     let mailOptions = {
         from: `${contactForm.name} <${contactForm.email}>`, // sender address
-        to: 'mccaffertycr@gmail.com', // list of receivers
+        to: '', // wherever they want to recieve the emails, this could be the same as the sender
         subject: `${contactForm.subject}`, // Subject line
         text: `${contactForm.message}` // plain text body
         //html: '<b>Hello world?</b>' html body
@@ -37,7 +35,7 @@ const mailer = {
 
     });
   });
-}
+  }
 }
 
 module.exports = mailer;
