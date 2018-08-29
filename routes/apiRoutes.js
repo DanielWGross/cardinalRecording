@@ -21,13 +21,6 @@ module.exports = (app) => {
       res.json(dbClients);
     });
   });
-  // POST Contact Form
-  app.post('/contact', (req, res) => {
-    console.log(req.body)
-    .then((dbContact) => {
-      // res.json(dbContact);
-    });
-  });
 };
 // ---------------------------------------------------FUTURE ADMIN ROUTES------------------------------------------------------------------
   // app.post('/equipment/admin', (req, res) => {
