@@ -3,7 +3,7 @@ const submitButton = document.querySelector('.main-btn');
 // The API object contains methods for each kind of request we will make.
 const API = {
   postAPI: function(data) {
-    return fetch("/", {
+    return fetch("/contact", {
       method: "POST",
       headers: {
         'Accept': 'application/json',
@@ -15,7 +15,6 @@ const API = {
 };
 // Logic to handle the click event on the submit button
 const handleSubmit = (event => {
-  console.log("Test");
   event.preventDefault();
 
   const newContact = {

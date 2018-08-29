@@ -1,6 +1,12 @@
 const db = require('../models');
+const autoMailer = require('../controllers/mailer');
 
 module.exports = (app) => {
+  // POST Contact Form
+  app.post('/contact', (req, res) => {
+    console.log(req.body);
+    autoMailer.sendEmail(req.body)
+  });
   // GET All Equipment
   app.get('/api/equipment', (req, res) => {
     db.Equipment.findAll({
