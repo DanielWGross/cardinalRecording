@@ -1,6 +1,12 @@
 const db = require('../models');
+const autoMailer = require('../controllers/mailer');
 
 module.exports = (app) => {
+  // POST Contact Form
+  app.post('/contact', (req, res) => {
+    console.log(req.body);
+    autoMailer.sendEmail(req.body)
+  });
   // GET All Equipment
   app.get('/api/equipment', (req, res) => {
     db.Equipment.findAll({
@@ -13,13 +19,6 @@ module.exports = (app) => {
     db.Client.findAll({})
     .then((dbClients) => {
       res.json(dbClients);
-    });
-  });
-  // POST Contact Form
-  app.post('/contact', (req, res) => {
-    console.log(req.body)
-    .then((dbContact) => {
-      // res.json(dbContact);
     });
   });
 };
