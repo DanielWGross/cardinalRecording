@@ -3,6 +3,7 @@ var express = require('express');
 var bodyParser = require('body-parser');
 var exphbs = require('express-handlebars');
 
+
 var db = require('./models');
 
 var app = express();
@@ -12,6 +13,7 @@ var PORT = process.env.PORT || 3000;
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(express.static('public'));
+
 
 // Handlebars
 app.engine(
@@ -26,10 +28,10 @@ app.set('view engine', 'handlebars');
 require('./routes/apiRoutes')(app);
 require('./routes/htmlRoutes')(app);
 
+
 var syncOptions = { force: false };
 
 // If running a test, set syncOptions.force to true
-// clearing the `testdb`
 if (process.env.NODE_ENV === 'test') {
   syncOptions.force = true;
 }
@@ -44,5 +46,6 @@ db.sequelize.sync(syncOptions).then(function() {
     );
   });
 });
+
 
 module.exports = app;
