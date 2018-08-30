@@ -3,7 +3,6 @@ var express = require('express');
 var bodyParser = require('body-parser');
 var exphbs = require('express-handlebars');
 var passport = require('passport');
-var session = require('express-session');
 
 var db = require('./models');
 
@@ -38,7 +37,9 @@ app.set('view engine', 'handlebars');
 // Routes
 require('./routes/apiRoutes')(app);
 require('./routes/htmlRoutes')(app);
-require('./app/config/passport/passport.js')(passport, models.admin);
+require('./config/passport.js')(passport, models.admin);
+require('./routes/auth.js')(app, passport);
+
 
 var syncOptions = { force: false };
 
@@ -58,7 +59,7 @@ db.sequelize.sync(syncOptions).then(function() {
     );
   });
 });
-var authRoute = require('./app/routes/auth.js')(app, passport);
+
 
 
 module.exports = app;
