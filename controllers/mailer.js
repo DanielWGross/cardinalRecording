@@ -10,17 +10,17 @@ const mailer = {
       let transporter = nodemailer.createTransport({
         service: 'gmail', // we need to enter cardinal recordings email info here
         auth: {
-            user: '', // cardinal recordings email  (save this in an env)
-            pass: '' // cardinal recordings password (")
+            user: 'cardinaltest21@gmail.com', // cardinal recordings email  (save this in an env)
+            pass: 'UWir4O1h' // cardinal recordings password (")
         }
     });
   
     // setup email data with unicode symbols
     let mailOptions = {
         from: `${contactForm.name} <${contactForm.email}>`, // sender address
-        to: '', // wherever they want to recieve the emails, this could be the same as the sender
+        to: 'cardinaltest21@gmail.com', // wherever they want to recieve the emails, this could be the same as the sender
         subject: `${contactForm.subject}`, // Subject line
-        text: `${contactForm.message}` // plain text body
+        text: `${contactForm.message} ${contactForm.email}` // plain text body
         //html: '<b>Hello world?</b>' html body
     };
 
