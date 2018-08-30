@@ -37,9 +37,7 @@ app.set('view engine', 'handlebars');
 // Routes
 require('./routes/apiRoutes')(app);
 require('./routes/htmlRoutes')(app);
-require('./config/passport.js')(passport, models.admin);
-require('./routes/auth.js')(app, passport);
-
+require('./app/config/passport/passport.js')(passport, models.admin);
 
 var syncOptions = { force: false };
 
@@ -59,7 +57,7 @@ db.sequelize.sync(syncOptions).then(function() {
     );
   });
 });
-
+var authRoute = require('./app/routes/auth.js')(app, passport);
 
 
 module.exports = app;
