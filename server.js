@@ -2,7 +2,7 @@ require('dotenv').config();
 var express = require('express');
 var bodyParser = require('body-parser');
 var exphbs = require('express-handlebars');
-var passport = require('passport');
+
 
 var db = require('./models');
 
@@ -14,16 +14,6 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(express.static('public'));
 
-
-
-// For Passport
-app.use(session({
-  secret: 'keyboard cat',
-  resave: true,
-  saveUninitialized: true
-})); // session secret
-app.use(passport.initialize());
-app.use(passport.session()); // persistent login sessions
 
 // Handlebars
 app.engine(
@@ -37,14 +27,11 @@ app.set('view engine', 'handlebars');
 // Routes
 require('./routes/apiRoutes')(app);
 require('./routes/htmlRoutes')(app);
-require('./config/passport.js')(passport, models.admin);
-require('./routes/auth.js')(app, passport);
 
 
 var syncOptions = { force: false };
 
 // If running a test, set syncOptions.force to true
-// clearing the `testdb`
 if (process.env.NODE_ENV === 'test') {
   syncOptions.force = true;
 }
@@ -59,7 +46,6 @@ db.sequelize.sync(syncOptions).then(function() {
     );
   });
 });
-
 
 
 module.exports = app;
