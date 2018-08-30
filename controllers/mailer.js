@@ -10,8 +10,8 @@ const mailer = {
       let transporter = nodemailer.createTransport({
         service: 'gmail', // we need to enter cardinal recordings email info here
         auth: {
-            user: 'cardinaltest21@gmail.com', // cardinal recordings email  (save this in an env)
-            pass: 'UWir4O1h' // cardinal recordings password (")
+            user: process.env.EMAIL_USER, // cardinal recordings email  (save this in an env)
+            pass: process.env.EMAIL_PASS // cardinal recordings password (")
         }
     });
   
